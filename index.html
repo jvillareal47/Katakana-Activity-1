@@ -9,6 +9,7 @@
 <body>
     <div class="container">
         
+        <!-- INTRO SCREEN -->
         <div id="screen-intro" class="screen active">
             <h1 class="title">Katakana Loanword Challenge</h1>
             <p class="subtitle">Master Japanese Gairaigo (Foreign Loanwords)</p>
@@ -29,11 +30,6 @@
                 <div class="form-group">
                     <label for="student-name">Your Full Name:</label>
                     <input type="text" id="student-name" placeholder="e.g., Jane Doe" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="student-photo">Upload Your Photo (for Certificate):</label>
-                    <input type="file" id="student-photo" accept="image/*">
                 </div>
 
                 <h3>Game Mode Settings</h3>
@@ -57,6 +53,7 @@
             </div>
         </div>
 
+        <!-- QUIZ SCREEN -->
         <div id="screen-quiz" class="screen">
             <div class="quiz-header card">
                 <div class="hud-item">
@@ -80,7 +77,8 @@
                 </div>
 
                 <div class="options-grid" id="options-container">
-                    </div>
+                    <!-- Options injected by JS -->
+                </div>
 
                 <div id="feedback-box" class="feedback-box hidden">
                     <h3 id="feedback-title"></h3>
@@ -90,11 +88,25 @@
             </div>
         </div>
 
+        <!-- RESULTS / CERTIFICATE SCREEN -->
         <div id="screen-result" class="screen">
             <h1 class="title">Course Completion Certificate</h1>
             
             <div class="instruction-banner">
-                <p>📷 <strong>Professors & Students:</strong> Please take a screenshot or click "Download Certificate" below to record your final score!</p>
+                <p>📷 <strong>Professors & Students:</strong> Take a real-time photo below to apply it to your certificate, then click "Download Certificate" or screenshot your final result!</p>
+            </div>
+
+            <!-- REAL-TIME CAMERA CAPTURE SECTION -->
+            <div class="card camera-card">
+                <h3>Take Certificate Photo</h3>
+                <div class="camera-wrapper">
+                    <video id="webcam" autoplay playsinline width="320" height="240"></video>
+                    <canvas id="photo-canvas" width="320" height="240" style="display:none;"></canvas>
+                </div>
+                <div class="camera-actions" style="margin-top: 10px;">
+                    <button class="btn btn-primary" id="btn-snap" style="width: auto; padding: 10px 20px;">📷 Take Photo</button>
+                    <button class="btn btn-secondary" id="btn-retake" style="width: auto; padding: 10px 20px; display: none;">🔄 Retake Photo</button>
+                </div>
             </div>
 
             <div id="certificate-wrapper" class="certificate-container">
@@ -143,6 +155,7 @@
 
     </div>
 
+    <!-- html2canvas library for downloading certificate as image -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="script.js"></script>
 </body>
