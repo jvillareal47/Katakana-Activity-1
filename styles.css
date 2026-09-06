@@ -1,0 +1,366 @@
+:root {
+    --primary-green: #2ecc71;
+    --dark-green: #27ae60;
+    --primary-purple: #8e44ad;
+    --dark-purple: #6c3483;
+    --light-bg: #f5f3f9;
+    --card-bg: #ffffff;
+    --text-color: #2c3e50;
+    --accent-yellow: #f1c40f;
+    --danger-red: #e74c3c;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    padding: 20px;
+    font-size: 18px; /* Increased overall base font size */
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
+.title {
+    text-align: center;
+    color: var(--primary-purple);
+    font-size: 2.8rem;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--dark-green);
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 20px rgba(142, 68, 173, 0.15);
+    border: 2px solid var(--primary-purple);
+}
+
+.intro-card h2, .intro-card h3 {
+    color: var(--primary-purple);
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.intro-card ul {
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+.intro-card li {
+    margin-bottom: 8px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+    color: var(--dark-purple);
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.2rem;
+    border: 2px solid var(--primary-purple);
+    border-radius: 8px;
+    outline: none;
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 16px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-green);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-green);
+}
+
+.btn-secondary {
+    background-color: var(--primary-purple);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: var(--dark-purple);
+}
+
+/* QUIZ HUD (SCORES AND TIMER) */
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+}
+
+.hud-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hud-label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--primary-purple);
+}
+
+/* Enlarged Scores and HUD text */
+.hud-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-color);
+}
+
+.hud-item.highlight .hud-value {
+    color: var(--dark-green);
+    font-size: 3rem; /* Extra large score for quick teacher viewing */
+}
+
+.prompt-box {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.prompt-label {
+    font-size: 1.3rem;
+    color: #7f8c8d;
+}
+
+.question-text {
+    font-size: 3.5rem; /* Extra large question target */
+    color: var(--primary-purple);
+    margin-top: 10px;
+    word-break: break-word;
+}
+
+/* OPTIONS GRID */
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.option-btn {
+    background-color: #f8f9fa;
+    border: 3px solid var(--primary-purple);
+    color: var(--text-color);
+    padding: 20px;
+    font-size: 1.6rem; /* Large answer options */
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.option-btn:hover {
+    background-color: #e8d8f0;
+}
+
+.option-btn.correct {
+    background-color: var(--primary-green) !important;
+    color: white !important;
+    border-color: var(--dark-green) !important;
+}
+
+.option-btn.wrong {
+    background-color: var(--danger-red) !important;
+    color: white !important;
+    border-color: #c0392b !important;
+}
+
+/* FEEDBACK BOX */
+.feedback-box {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #eef9f1;
+    border: 2px solid var(--primary-green);
+}
+
+.feedback-box.incorrect {
+    background-color: #fdf2f2;
+    border-color: var(--danger-red);
+}
+
+.feedback-box h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.feedback-box p {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* CERTIFICATE STYLING */
+.instruction-banner {
+    background-color: var(--accent-yellow);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.certificate-container {
+    position: relative;
+    width: 100%;
+    min-height: 520px;
+    background-color: #fff;
+    border: 8px double var(--primary-purple);
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.cert-photo-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.18; /* Background photo watermark effect */
+    z-index: 1;
+}
+
+.cert-overlay {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.cert-header h2 {
+    font-size: 2.2rem;
+    color: var(--primary-purple);
+    letter-spacing: 2px;
+}
+
+.cert-header p {
+    font-size: 1.3rem;
+    color: var(--dark-green);
+    font-weight: bold;
+}
+
+.cert-body {
+    margin-top: 25px;
+}
+
+.cert-text {
+    font-size: 1.3rem;
+}
+
+/* Enormously scaled student name and scores on certificate */
+.cert-name {
+    font-size: 3.2rem;
+    color: var(--dark-purple);
+    text-decoration: underline;
+    margin: 10px 0;
+}
+
+.cert-stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid var(--primary-green);
+}
+
+.stat-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--primary-purple);
+}
+
+.stat-value {
+    font-size: 3.2rem; /* Massive final score text */
+    font-weight: 900;
+    color: var(--dark-green);
+}
+
+.cert-details p {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.cert-note {
+    margin-top: 20px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--primary-purple);
+}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .options-grid {
+        grid-template-columns: 1fr;
+    }
+    .cert-stats {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
