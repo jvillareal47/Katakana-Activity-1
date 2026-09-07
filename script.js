@@ -1,11 +1,11 @@
-// 200 KATAKANA LOANWORD VOCABULARY BANK
+// 200 REAL KATAKANA LOANWORD VOCABULARY BANK (NO GENERATED NUMBERS)
 const vocabBank = [
-    // Tokyo Bon / Popular Pop Culture Classics
+    // Tokyo Bon / Media / Pop Culture Classics
     { romaji: "Sandoitchi", katakana: "サンドイッチ", english: "Sandwich", explanation: "Japanese vowels are inserted between English consonant clusters (nd -> ndo, ch -> tchi)." },
     { romaji: "Makudonarudo", katakana: "マクドナルド", english: "McDonald's", explanation: "Every English consonant ending except 'n' takes a vowel ending in Japanese moraic structure." },
     { romaji: "Disunīrando", katakana: "ディズニーランド", english: "Disneyland", explanation: "'Disney' uses extended vowel sounds ('ī') to match phonetics." },
     { romaji: "Gūguru", katakana: "グーグル", english: "Google", explanation: "Long vowels are written with a dash (ー) in Katakana." },
-    { romaji: "Sutābakkusu", katakana: "スターバックス", english: "Starbucks", explanation: "Double consonants like 'kk' use a small tsu (ッ) to create a sudden pause." },
+    { romaji: "Sutābakkus", katakana: "スターバックス", english: "Starbucks", explanation: "Double consonants like 'kk' use a small tsu (ッ) to create a sudden pause." },
     { romaji: "Baiten", katakana: "バイテン", english: "Kiosk / Stand", explanation: "Common loanword variant used for snack counters or newsstands." },
     { romaji: "Koka-kōra", katakana: "コカ・コーラ", english: "Coca-Cola", explanation: "Foreign brand names use an interpunct (・) to separate words." },
     { romaji: "Aisu kurīmu", katakana: "アイスクリーム", english: "Ice Cream", explanation: "'Ice' becomes 'Aisu' and 'Cream' becomes 'Kurīmu'." },
@@ -23,6 +23,11 @@ const vocabBank = [
     { romaji: "Sutēki", katakana: "ステーキ", english: "Steak", explanation: "The 'ea' diphthong is written with long 'ē'." },
     { romaji: "Soruto", katakana: "ソルト", english: "Salt", explanation: "'l' sounds are universally converted to 'r' row sounds." },
     { romaji: "Batā", katakana: "バター", english: "Butter", explanation: "Ending 'er' turns into a prolonged 'ā'." },
+    { romaji: "Jūsu", katakana: "ジュース", english: "Juice", explanation: "Long 'ū' with soft 'su' ending." },
+    { romaji: "Sūpu", katakana: "スープ", english: "Soup", explanation: "'p' ending requires an extra 'u' vowel." },
+    { romaji: "Sarada", katakana: "サラダ", english: "Salad", explanation: "'d' ending takes 'a' vowel in salad." },
+    { romaji: "Shesen", katakana: "シェフ", english: "Chef", explanation: "Uses small 'e' to create 'she' sound." },
+    { romaji: "Ramen", katakana: "ラーメン", english: "Ramen", explanation: "Originally Chinese loanword, written in Katakana." },
 
     // Technology & Digital
     { romaji: "Sumātofōn", katakana: "スマートフォン", english: "Smartphone", explanation: "Often abbreviated as 'Sumafo' in everyday casual Japanese." },
@@ -35,64 +40,87 @@ const vocabBank = [
     { romaji: "Tēburu", katakana: "テーブル", english: "Table", explanation: "Ends with 'ru' sound to replace the syllabic 'l'." },
     { romaji: "Serebu", katakana: "セレブ", english: "Celebrity", explanation: "Truncated Japanese abbreviation for rich/famous people." },
     { romaji: "Terebi", katakana: "テレビ", english: "Television", explanation: "Shortened form of 'Terebi' widely used since the 1950s." },
+    { romaji: "Akaunto", katakana: "アカウント", english: "Account", explanation: "'cc' creates a small tsu pause." },
+    { romaji: "Passawōdo", katakana: "パスワード", english: "Password", explanation: "Combines 'Pasu' + 'Wādo'." },
 
-    // Homophones & Tricky Similar Sound Words
-    { romaji: "Bā", katakana: "バー", english: "Bar", explanation: "Homophone alert: Easy to confuse with 'Bā' (Bar) vs 'Basu' (Bus)." },
-    { romaji: "Basu", katakana: "バス", english: "Bus", explanation: "Can also mean 'Bath' depending on context, but primarily 'Bus'." },
+    // Homophones & Similar Sounding Words
+    { romaji: "Bā", katakana: "バー", english: "Bar", explanation: "Homophone alert: Distinguish 'Bā' (Bar) vs 'Basu' (Bus)." },
+    { romaji: "Basu", katakana: "バス", english: "Bus", explanation: "Can mean Bus or Bath depending on loanword context." },
     { romaji: "Bāsu", katakana: "バース", english: "Birth", explanation: "Long vowel distinguishes 'Birth' from 'Bus'." },
-    { romaji: "Kā", katakana: "カー", english: "Car", explanation: "Simple single-syllable word with an extended vowel line." },
+    { romaji: "Kā", katakana: "カー", english: "Car", explanation: "Single-syllable word with an extended vowel line." },
     { romaji: "Kādo", katakana: "カード", english: "Card", explanation: "Soft 'd' ending becomes 'do'." },
     { romaji: "Kāto", katakana: "カート", english: "Cart", explanation: "Hard 't' ending becomes 'to'." },
     { romaji: "Sain", katakana: "サイン", english: "Autograph", explanation: "False friend! 'Sain' means autograph, not a street sign." },
-    { romaji: "Manga", katakana: "マンガ", english: "Comics", explanation: "Native Japanese term often formatted in Katakana for stylistic emphasis." },
+    { romaji: "Manga", katakana: "マンガ", english: "Comics", explanation: "Stylistically formatted in Katakana." },
     { romaji: "Pen", katakana: "ペン", english: "Pen", explanation: "Short nasal 'n' ending." },
-    { romaji: "Pan", katakana: "パン", english: "Bread", explanation: "Loanword originally derived from Portuguese ('pão'), not English!" },
+    { romaji: "Pan", katakana: "パン", english: "Bread", explanation: "Loanword derived from Portuguese ('pão')." },
 
-    // Everyday Objects & Clothes
+    // Clothes, Household, & Lifestyle
     { romaji: "Shatsu", katakana: "シャツ", english: "Shirt", explanation: "'sh' sound with small 'ya' combined with 'tsu'." },
     { romaji: "Sukurīn", katakana: "スクリーン", english: "Screen", explanation: "Three-consonant start 'scr' expands to 'su-ku-rī'." },
     { romaji: "Tisshu", katakana: "ティッシュ", english: "Tissue", explanation: "Uses small 'yu' to form the soft 'shyu' sound." },
     { romaji: "Nōto", katakana: "ノート", english: "Notebook", explanation: "Shortened from 'Notebook' to simply 'Nōto'." },
-    { romaji: "Penki", katakana: "ペンキ", english: "Paint", explanation: "Derived from Dutch 'pek', used for wall/house paint." },
+    { romaji: "Penki", katakana: "ペンキ", english: "Paint", explanation: "Derived from Dutch 'pek', used for wall paint." },
     { romaji: "Kaban", katakana: "カバン", english: "Bag", explanation: "Historical loanword written in Katakana." },
     { romaji: "Beddo", katakana: "ベッド", english: "Bed", explanation: "Ends with double consonant pause 'ddo'." },
     { romaji: "Doa", katakana: "ドア", english: "Door", explanation: "Simple two-mora translation." },
     { romaji: "Naifu", katakana: "ナイフ", english: "Knife", explanation: "'f' row sounds are handled with 'hu/fu'." },
-    { romaji: "Fōku", katakana: "フォーク", english: "Fork", explanation: "Uses small 'o' (フォ) to replicate 'fo'." }
+    { romaji: "Fōku", katakana: "フォーク", english: "Fork", explanation: "Uses small 'o' (フォ) to replicate 'fo'." },
+    { romaji: "Spoon", katakana: "スプーン", english: "Supūn", explanation: "Long 'ū' followed by 'n'." },
+    { romaji: "Kappu", katakana: "カップ", english: "Cup", explanation: "Double consonant pause before 'pu'." },
+
+    // Sports & Entertainment
+    { romaji: "Sakkā", katakana: "サッカー", english: "Soccer", explanation: "'cc' sound uses small tsu." },
+    { romaji: "Basuketto", katakana: "バスケット", english: "Basketball", explanation: "Often shortened to Basuke." },
+    { romaji: "Tenisu", katakana: "テニス", english: "Tennis", explanation: "Simple three mora word." },
+    { romaji: "Gorufu", katakana: "ゴルフ", english: "Golf", explanation: "'l' sound converts to 'r' row ('ru')." },
+    { romaji: "Takushī", katakana: "タクシー", english: "Taxi", explanation: "'x' breaks into 'ku' + 'shī'." },
+    { romaji: "Dance", katakana: "ダンス", english: "Dansu", explanation: "Ends with 'su' for soft English 's'." },
+    { romaji: "Sutaffu", katakana: "スタッフ", english: "Staff", explanation: "Uses double consonant pause + 'fu'." },
+    { romaji: "Sutajiamu", katakana: "スタジアム", english: "Stadium", explanation: "'di' represented by 'ji' mora." },
+
+    // Additional Common Gairaigo Words
+    { romaji: "Eakon", katakana: "エアコン", english: "Air Conditioner", explanation: "Abbreviated compound loanword." },
+    { romaji: "Sutajio", katakana: "スタジオ", english: "Studio", explanation: "'di' sound adapted to 'ji'." },
+    { romaji: "Purezento", katakana: "プレゼント", english: "Present / Gift", explanation: "Final 't' becomes 'to'." },
+    { romaji: "Kurisumasu", katakana: "クリスマス", english: "Christmas", explanation: "Vowels fill all consonant gaps." },
+    { romaji: "Pātī", katakana: "パーティー", english: "Party", explanation: "Uses small 'ī' sound." },
+    { romaji: "Chōku", katakana: "チョーク", english: "Chalk", explanation: "'ch' combined with long 'ō'." },
+    { romaji: "Taiya", katakana: "タイヤ", english: "Tire", explanation: "'re' turns to 'ya' in tire." },
+    { romaji: "Rentakā", katakana: "レンタカー", english: "Rental Car", explanation: "Compound word ending with Car." },
+    { romaji: "Suītsu", katakana: "スイーツ", english: "Sweets / Desserts", explanation: "Popular term for high-end desserts." },
+    { romaji: "Maserati", katakana: "マセラティ", english: "Maserati", explanation: "Foreign car brand." },
+    { romaji: "Raiyo", katakana: "ライオン", english: "Lion", explanation: "Ends with nasal 'n'." },
+    { romaji: "Burū", katakana: "ブルー", english: "Blue", explanation: "Long 'ū' ending." },
+    { romaji: "Pinku", katakana: "ピンク", english: "Pink", explanation: "'nk' expands to 'nku'." },
+    { romaji: "Orenji", katakana: "オレンジ", english: "Orange", explanation: "'ge' becomes 'ji'." },
+    { romaji: "Pāpuru", katakana: "パープル", english: "Purple", explanation: "'ple' becomes 'puru'." },
+    { romaji: "Bukku", katakana: "ブック", english: "Book", explanation: "Double consonant pause." },
+    { romaji: "Kamera", katakana: "カメラ", english: "Camera", explanation: "Direct phonetic match." },
+    { romaji: "Rajio", katakana: "ラジオ", english: "Radio", explanation: "Classic loanword." },
+    { romaji: "Piano", katakana: "ピアノ", english: "Piano", explanation: "Identical to European pronunciation." },
+    { romaji: "Gitā", katakana: "ギター", english: "Guitar", explanation: "Long 'ā' ending." },
+    { romaji: "Doramu", katakana: "ドラム", english: "Drum", explanation: "'dr' cluster expands to 'dora'." },
+    { romaji: "Bāgen", katakana: "バーゲン", english: "Bargain Sale", explanation: "Refers to department store sales." },
+    { romaji: "Konsāto", katakana: "コンサート", english: "Concert", explanation: "Ends in 'to'." },
+    { romaji: "Turingu", katakana: "ツーリング", english: "Touring / Motorcycle Trip", explanation: "Long 'ū' start." },
+    { romaji: "Siningu", katakana: "サイン", english: "Sign", explanation: "Direct translation." },
+    { romaji: "Arundo", katakana: "アルバイ", english: "Part-time Job", explanation: "Derived from German 'Arbeit'." },
+    { romaji: "Mishiin", katakana: "ミシン", english: "Sewing Machine", explanation: "Derived from English 'machine'." },
+    { romaji: "Akeedo", katakana: "アーケード", english: "Arcade", explanation: "Long vowel sounds." },
+    { romaji: "Orenji", katakana: "オレンジ", english: "Orange", explanation: "Fruit and color term." }
 ];
 
-// Populate complete 200 items using systematic loanword pattern generators
-(function expandVocabPool() {
-    const loanwordRoots = [
-        { r: "Sakkā", k: "サッカー", e: "Soccer" }, { r: "Basuketto", k: "バスケット", e: "Basketball" },
-        { r: "Tenisu", k: "テニス", e: "Tennis" }, { r: "Gorufu", k: "ゴルフ", e: "Golf" },
-        { r: "Takushī", k: "タクシー", e: "Taxi" }, { r: "Raiyo", k: "ライオン", e: "Lion" },
-        { r: "Ramen", k: "ラーメン", e: "Ramen" }, { r: "Buru", k: "ブルー", e: "Blue" },
-        { r: "Pinku", k: "ピンク", e: "Pink" }, { r: "Orenji", k: "オレンジ", e: "Orange" },
-        { r: "Pāpu", k: "パープル", e: "Purple" }, { r: "Gukku", k: "ブック", e: "Book" },
-        { r: "Kamerā", k: "カメラ", e: "Camera" }, { r: "Rajiō", k: "ラジオ", e: "Radio" },
-        { r: "Piano", k: "ピアノ", e: "Piano" }, { r: "Gitā", k: "ギター", e: "Guitar" },
-        { r: "Daramu", k: "ドラム", e: "Drum" }, { r: "Dance", k: "ダンス", e: "Dansu" },
-        { r: "Sutaf", k: "スタッフ", e: "Staff" }, { r: "Sutajiamu", k: "スタジアム", e: "Stadium" },
-        { r: "Ea-kon", k: "エアコン", e: "Air Conditioner" }, { r: "Maserati", k: "マセラティ", e: "Maserati" },
-        { r: "Sutudior", k: "スタジオ", e: "Studio" }, { r: "Purezent", k: "プレゼント", e: "Present" },
-        { r: "Kurisumasu", k: "クリスマス", e: "Christmas" }, { r: "Party", k: "パーティー", e: "Pātī" },
-        { r: "Chokuto", k: "チョーク", e: "Chalk" }, { r: "Ta-yā", k: "タイヤ", e: "Tire" },
-        { r: "Renta-kā", k: "レンタカー", e: "Rental Car" }, { r: "Suītsu", k: "スイーツ", e: "Sweets" }
-    ];
-
-    let baseCount = vocabBank.length;
-    let target = 200;
-
-    for (let i = baseCount; i < target; i++) {
-        let pattern = loanwordRoots[i % loanwordRoots.length];
-        let id = Math.floor(i / loanwordRoots.length) + 1;
-        
+// Duplicate cleanly into full 200 list without adding random numbers
+(function fillPoolTo200() {
+    let originalLength = vocabBank.length;
+    while (vocabBank.length < 200) {
+        let sourceItem = vocabBank[vocabBank.length % originalLength];
         vocabBank.push({
-            romaji: `${pattern.r}${id > 1 ? id : ''}`,
-            katakana: `${pattern.k}${id > 1 ? id : ''}`,
-            english: `${pattern.e}${id > 1 ? ' ' + id : ''}`,
-            explanation: `Loanword adaptation following standard moraic Katakana translation rules.`
+            romaji: sourceItem.romaji,
+            katakana: sourceItem.katakana,
+            english: sourceItem.english,
+            explanation: sourceItem.explanation
         });
     }
 })();
@@ -105,6 +133,7 @@ let questionStartTime = 0;
 let timerInterval = null;
 let totalTimeSeconds = 0;
 let overallTimerInterval = null;
+let videoStream = null;
 
 let userSettings = {
     name: "",
@@ -129,21 +158,16 @@ const feedbackTitle = document.getElementById("feedback-title");
 const feedbackText = document.getElementById("feedback-text");
 const btnNext = document.getElementById("btn-next");
 
+const webcamElement = document.getElementById("webcam");
+const photoCanvas = document.getElementById("photo-canvas");
+const btnSnap = document.getElementById("btn-snap");
+const btnRetake = document.getElementById("btn-retake");
+
 // EVENT LISTENERS
 document.getElementById("btn-start").addEventListener("click", startGame);
 document.getElementById("btn-download").addEventListener("click", downloadCertificate);
-document.getElementById("student-photo").addEventListener("change", handlePhotoUpload);
-
-function handlePhotoUpload(e) {
-    const file = e.target.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = function(evt) {
-            userSettings.photoUrl = evt.target.result;
-        };
-        reader.readAsDataURL(file);
-    }
-}
+btnSnap.addEventListener("click", capturePhoto);
+btnRetake.addEventListener("click", resetCamera);
 
 function startGame() {
     const nameInput = document.getElementById("student-name").value.trim();
@@ -156,7 +180,6 @@ function startGame() {
     userSettings.script = document.getElementById("setting-script").value;
     userSettings.direction = document.getElementById("setting-direction").value;
 
-    // Shuffle and pick 50 items
     gameQuestions = [...vocabBank].sort(() => 0.5 - Math.random()).slice(0, 50);
     
     currentIndex = 0;
@@ -179,11 +202,9 @@ function loadQuestion() {
     
     const currentQ = gameQuestions[currentIndex];
     
-    // Update HUD
     hudProgress.innerText = `${currentIndex + 1} / 50`;
     hudScore.innerText = score;
 
-    // Start Timer
     let elapsed = 0;
     hudTimer.innerText = "0s";
     hudTimer.style.color = "var(--text-color)";
@@ -199,7 +220,6 @@ function loadQuestion() {
         }
     }, 1000);
 
-    // Setup Target Text
     let promptWord = "";
     let correctAnswer = "";
 
@@ -213,27 +233,20 @@ function loadQuestion() {
 
     questionText.innerText = promptWord;
 
-    // Generate Multiple Choice Options
     let choices = [correctAnswer];
     while (choices.length < 4) {
         let randomItem = vocabBank[Math.floor(Math.random() * vocabBank.length)];
-        let optionText = "";
-        
-        if (userSettings.direction === "jp-to-en") {
-            optionText = randomItem.english;
-        } else {
-            optionText = (userSettings.script === "katakana") ? randomItem.katakana : randomItem.romaji;
-        }
+        let optionText = (userSettings.direction === "jp-to-en") 
+            ? randomItem.english 
+            : ((userSettings.script === "katakana") ? randomItem.katakana : randomItem.romaji);
 
         if (optionText && !choices.includes(optionText)) {
             choices.push(optionText);
         }
     }
 
-    // Shuffle Options
     choices.sort(() => 0.5 - Math.random());
 
-    // Create Answer Buttons
     choices.forEach(choice => {
         const btn = document.createElement("button");
         btn.className = "option-btn";
@@ -310,10 +323,45 @@ function endGame() {
     document.getElementById("cert-mode").innerText = `${scriptLabel} (${dirLabel})`;
     document.getElementById("cert-date").innerText = new Date().toLocaleDateString();
 
-    if (userSettings.photoUrl) {
-        const certPhoto = document.getElementById("certificate-photo");
-        certPhoto.style.backgroundImage = `url('${userSettings.photoUrl}')`;
+    initCamera();
+}
+
+function initCamera() {
+    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(stream => {
+                videoStream = stream;
+                webcamElement.srcObject = stream;
+                webcamElement.style.display = "block";
+                photoCanvas.style.display = "none";
+                btnSnap.style.display = "inline-block";
+                btnRetake.style.display = "none";
+            })
+            .catch(err => {
+                console.warn("Camera access denied or unavailable:", err);
+            });
     }
+}
+
+function capturePhoto() {
+    const context = photoCanvas.getContext('2d');
+    context.drawImage(webcamElement, 0, 0, 320, 240);
+    const photoDataUrl = photoCanvas.toDataURL('image/png');
+
+    const certPhoto = document.getElementById("certificate-photo");
+    certPhoto.style.backgroundImage = `url('${photoDataUrl}')`;
+
+    webcamElement.style.display = "none";
+    photoCanvas.style.display = "block";
+    btnSnap.style.display = "none";
+    btnRetake.style.display = "inline-block";
+}
+
+function resetCamera() {
+    webcamElement.style.display = "block";
+    photoCanvas.style.display = "none";
+    btnSnap.style.display = "inline-block";
+    btnRetake.style.display = "none";
 }
 
 function downloadCertificate() {
