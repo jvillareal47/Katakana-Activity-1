@@ -5,7 +5,7 @@ const vocabBank = [
     { romaji: "Makudonarudo", katakana: "マクドナルド", english: "McDonald's", explanation: "Every English consonant ending except 'n' takes a vowel ending in Japanese moraic structure." },
     { romaji: "Disunīrando", katakana: "ディズニーランド", english: "Disneyland", explanation: "'Disney' uses extended vowel sounds ('ī') to match phonetics." },
     { romaji: "Gūguru", katakana: "グーグル", english: "Google", explanation: "Long vowels are written with a dash (ー) in Katakana." },
-    { romaji: "Sutābakkus", katakana: "スターバックス", english: "Starbucks", explanation: "Double consonants like 'kk' use a small tsu (ッ) to create a sudden pause." },
+    { romaji: "Sutābakkusu", katakana: "スターバックス", english: "Starbucks", explanation: "Double consonants like 'kk' use a small tsu (ッ) to create a sudden pause." },
     { romaji: "Baiten", katakana: "バイテン", english: "Kiosk / Stand", explanation: "Common loanword variant used for snack counters or newsstands." },
     { romaji: "Koka-kōra", katakana: "コカ・コーラ", english: "Coca-Cola", explanation: "Foreign brand names use an interpunct (・) to separate words." },
     { romaji: "Aisu kurīmu", katakana: "アイスクリーム", english: "Ice Cream", explanation: "'Ice' becomes 'Aisu' and 'Cream' becomes 'Kurīmu'." },
